@@ -1,14 +1,11 @@
 # Import the necessary packages
 import streamlit as st
 import pandas as pd
-from pickle import load
 import joblib
 import pickle
 import numpy as np
 import math
 import os
-from config.definitions import ROOT_DIR
-from PIL import Image
 import matplotlib.pyplot as plt
 
 # Set up the website (name, layout)
