@@ -10,7 +10,8 @@ st.title("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted b
 
 # Set up the multi-page choice on the left part
 with st.sidebar:
-    st.write("**User Input Parameters**")
+    st.markdown("## **$\color{blue}{User Input Parameters}$**")
+    st.markdown("- Column Type")
     
 
 
