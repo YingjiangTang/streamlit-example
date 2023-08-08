@@ -1,6 +1,6 @@
 # Import the necessary packages
 import streamlit as st
-import panda as pd
+import pandas as pd
 
 
 # Set up the website (name, layout)
