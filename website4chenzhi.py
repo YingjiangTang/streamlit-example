@@ -1,10 +1,6 @@
 # Import the necessary packages
 import streamlit as st
-import pandas as pd
-import numpy as np
-import math
-import os
-import matplotlib.pyplot as plt
+
 
 # Set up the website (name, layout)
 st.set_page_config(page_title="MaGeNiuBi", layout="wide")
