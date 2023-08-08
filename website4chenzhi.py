@@ -19,3 +19,9 @@ with st.container():
     st.header('Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models')
 
 
+# Load models and scalers
+# Circular columns
+CC_GBR=joblib.load(os.path.join(ROOT_DIR,'CFST_Circ_Columns_GBR.joblib'))
+CC_GBR_sc=pickle.load(open(os.path.join(ROOT_DIR,'CFST_Circ_Columns_GBR.pkl'),'rb'))
+
+
