@@ -1,5 +1,6 @@
 # Import the necessary packages
 import streamlit as st
+import panda as pd
 
 
 # Set up the website (name, layout)
@@ -10,9 +11,11 @@ st.title("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted b
 
 # Set up the multi-page choice on the left part
 with st.sidebar:
-    st.markdown("## **\color{blue}{User Input Parameters}**")
+    st.markdown("## **User Input Parameters**")
     columntype = st.selectbox("Column Type", ('Circular Column', 'Circular Beam-Column', 'Rectangular Column', 'Rectangular Beam-Column'))
     st.write("You selected: ", columntype)
+    st.write("---")
+    
 
 
 
