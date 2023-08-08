@@ -6,7 +6,13 @@ import streamlit as st
 st.set_page_config(page_title="MaGeNiuBi", layout="wide")
 
 # Set up the header
+st.title("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models")
+
 with st.container():
-    st.header('Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models')
+    st.subheader('Input Parameters')
+    st.write("---")
+    st.subheader('Nominal (Nn) and Design (Nd) Resistances')
+
+
 
 
