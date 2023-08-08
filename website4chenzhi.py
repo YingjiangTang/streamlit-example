@@ -22,8 +22,7 @@ with st.sidebar:
     edf1 = st.data_editor(df1)
     st.write("---")
     st.write("fy(MPa)")
-    df2 = pd.DataFrame(np.zeros([0,0]))
-    edf2 = st.data_editor(df2)
+    
 
 
 
