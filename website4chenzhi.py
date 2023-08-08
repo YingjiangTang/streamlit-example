@@ -18,7 +18,7 @@ with st.sidebar:
     st.write("You selected: ", columntype)
     st.write("---")
     st.write("f'c(MPa)")
-    df1 = pd.DataFrame({[0]})
+    df1 = pd.DataFrame({[0],})
     edf1 = st.data_editor(df1)
     st.write("---")
     st.write("fy(MPa)")
