@@ -44,9 +44,9 @@ with st.sidebar:
     st.write("Input an Excel file")
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
-        st.write("You uploaded:")
-        st.write("uploaded_file")
-        st.write(uploaded_file)
+        fileExtension = uploaded_file.type
+        st.write(fileExtension)
+        
 
 
 
