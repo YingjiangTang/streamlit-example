@@ -18,8 +18,8 @@ with st.sidebar:
     st.write("You selected: ", columntype)
     st.write("---")
     st.write("f'c(MPa)")
-    df1 = pd.DataFrame({tuple([0])})
-    edf1 = st.data_editor(df1)
+    df1 = pd.DataFrame(np.zeros([0,0]))
+    edf1 = st.data_editor(df1,column_config={st.column_config.NumberColumn(format="$%d",)},)
     st.write("---")
     st.write("fy(MPa)")
     
