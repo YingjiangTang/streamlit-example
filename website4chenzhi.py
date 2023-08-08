@@ -14,14 +14,21 @@ st.header("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted 
 # Set up the multi-page choice on the left part
 with st.sidebar:
     st.markdown("## **User Input Parameters**")
+    # Set up the input for Column Type selected by users
     columntype = st.selectbox("Column Type", ('Circular Column', 'Circular Beam-Column', 'Rectangular Column', 'Rectangular Beam-Column'))
     st.write("You selected: ", columntype)
     st.write("---")
-    st.write("f'c(MPa)")
-    df1 = pd.DataFrame(np.zeros([0,0]))
-    edf1 = st.data_editor(df1,column_config={st.column_config.NumberColumn(format="$%d",)},)
+    # Set up the inputs for Material Properties
+    st.write("Material Properties")
+    col1, col2 = st.columns(2)
+    with col1:
+        fc = st.number_input("f'c (MPa)")
+
+    with col2:
+        fy = st.number_input("fy (MPa)")
+    
     st.write("---")
-    st.write("fy(MPa)")
+    st.write("Cross Section Dimension")
     
 
 
