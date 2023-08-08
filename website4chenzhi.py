@@ -18,12 +18,12 @@ with st.sidebar:
     st.write("You selected: ", columntype)
     st.write("---")
     st.write("f'c(MPa)")
-    df1 = pd.DataFrame(np.zeros([1,1]))
-    edf1 = st.experimental_data_editor(df1)
+    df1 = pd.DataFrame(np.zeros([0,0]))
+    edf1 = st.data_editor(df1)
     st.write("---")
     st.write("fy(MPa)")
-    df = pd.DataFrame(np.zeros([1,1]))
-    edf2 = st.experimental_data_editor(df2)
+    df2 = pd.DataFrame(np.zeros([0,0]))
+    edf2 = st.data_editor(df2)
 
 
 
