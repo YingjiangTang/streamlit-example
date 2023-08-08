@@ -1,8 +1,13 @@
 # Import the necessary packages
 import streamlit as st
+# Data related packages
 import pandas as pd
 import numpy as np
 import math
+# File related packages
+from io import StringIO
+import os
+
 
 
 # Set up the website (name, layout)
@@ -38,6 +43,13 @@ with st.sidebar:
     # Set up the part for user input file
     st.write("Input an Excel file")
     uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+        st.write(uploaded_file)
+
+
+
+    # Get the file name
+
 
 
 
