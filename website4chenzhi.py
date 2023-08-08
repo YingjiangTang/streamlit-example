@@ -1,13 +1,14 @@
 # Import the necessary packages
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 
 # Set up the website (name, layout)
 st.set_page_config(page_title="MaGeNiuBi", layout="wide")
 
 # Set up the header
-st.title("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models")
+st.header("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models")
 
 # Set up the multi-page choice on the left part
 with st.sidebar:
@@ -15,7 +16,13 @@ with st.sidebar:
     columntype = st.selectbox("Column Type", ('Circular Column', 'Circular Beam-Column', 'Rectangular Column', 'Rectangular Beam-Column'))
     st.write("You selected: ", columntype)
     st.write("---")
-    
+    st.write("f'c(MPa)")
+    df1 = pd.DataFrame(np.zeros(0,0))
+    edf1 = st.data_editor(df1)
+    st.write("---")
+    st.write("fy(MPa)")
+    df = pd.DataFrame(np.zeros(0,0))
+    edf2 = st.data_editor(df2)
 
 
 
