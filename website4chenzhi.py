@@ -45,7 +45,9 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         fileExtension = uploaded_file.type
-        st.write(fileExtension)
+        if fileExtension == 'text/plain':
+            
+        
         
 
 
