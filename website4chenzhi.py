@@ -69,7 +69,7 @@ with st.sidebar:
                 csvarray = np.asarray(csvdata)
                 coldata = csvarray[:,2]
                 targdata = "W16"
-                finddata = np.where((targdata in coldata))[0]
+                finddata = np.where((targdata in coldata))
                 
 
             
