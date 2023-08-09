@@ -56,6 +56,9 @@ with st.sidebar:
         # Add a button for the user to process
         if st.button("Process"):
             if fileExtension == 'text/plain':
+                # Read the text file in byte type
+                # rawtext = uploaded_file.read()
+
                 # Read the text file and convert as string type
                 rawtext = str(uploaded_file.read(), "utf-8")
                 
@@ -63,6 +66,10 @@ with st.sidebar:
             if fileExtension == 'text/csv':
                 # Read the table in csv file
                 csvdata = pd.read_csv(uploaded_file)
+
+            if fileExtension == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+                # Read the table in excel file
+                xsldata = pd.read_excel(uploaded_file)
 
 
             
@@ -87,8 +94,9 @@ with st.container():
     st.subheader('Input Parameters')
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
-    st.write(rawtext)
+    # st.write(rawtext)
     # st.dataframe(csvdata)
+    st.dataframe(xsldata)
 
 
 
