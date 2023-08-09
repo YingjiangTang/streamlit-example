@@ -67,6 +67,10 @@ with st.sidebar:
                 # Read the table in csv file
                 csvdata = pd.read_csv(uploaded_file)
                 csvarray = np.asarray(csvdata)
+                coldata = csvarray[:,2]
+                targdata = "W16"
+                finddata = np.where((coldata == targdata).all(axis=1))[0]
+                
 
             
 
@@ -96,7 +100,8 @@ with st.container():
     # st.write(rawtext)
     st.dataframe(csvdata)
     flag = csvarray[0][4]
-    st.write(flag)
+    st.write(coldata)
+    st.write(finddata)
 
 
 
