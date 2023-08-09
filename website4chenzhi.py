@@ -47,6 +47,7 @@ with st.sidebar:
     st.markdown("## **User Input File**")
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
+        st.write(uploaded_file)
         st.write(uploaded_file.type)
         fileExtension = uploaded_file.type
         if fileExtension == 'text/plain':
