@@ -54,7 +54,7 @@ with st.sidebar:
         # Add a button for the user to process
         if st.button("Process"):
             if fileExtension == 'text/plain':
-                st.write(000)
+                rawtext = uploaded_file.read()
                 
             if fileExtension == 'text/csv':
                 csvdata = pd.read_csv(uploaded_file)
@@ -82,7 +82,14 @@ with st.container():
     st.subheader('Input Parameters')
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
-    st.dataframe(csvdata)
+
+    if rawtext is not None:
+        st.write(rawtext)
+
+    if csvdata is not None:
+        st.dataframe(csvdata)
+
+
 
 # Resistance factors
 phi_CC_GBR=0.85
