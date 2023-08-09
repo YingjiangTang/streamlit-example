@@ -16,7 +16,7 @@ st.set_page_config(page_title="MaGeNiuBi", layout="wide")
 # Set up the header
 st.header("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models")
 
-# Set up the multi-page choice on the left part
+# Set up the first section on the left part
 with st.sidebar:
     st.markdown("## **User Input Parameters**")
     
@@ -41,11 +41,13 @@ with st.sidebar:
     st.write("Cross Section Dimension")
 
 
+# Set up the second section on the left part
 with st.sidebar:
     # Set up the part for user input file
     st.markdown("## **User Input File**")
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
+        st.write(uploaded_file.type)
         fileExtension = uploaded_file.type
         if fileExtension == 'text/plain':
             st.write(000)
