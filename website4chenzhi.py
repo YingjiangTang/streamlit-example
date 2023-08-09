@@ -94,7 +94,7 @@ with st.container():
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
     # st.write(rawtext)
     st.dataframe(csvdata)
-    flag = csvdata[0,4]
+    flag = csvdata[0][4]
     st.write(flag)
 
 
