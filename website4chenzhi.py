@@ -69,7 +69,7 @@ with st.sidebar:
 
             if fileExtension == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
                 # Read the table in excel file
-                xsldata = pd.read_excel(uploaded_file)
+                xsldata = pd.read_excel(uploaded_file, engine='openpyxl')
 
 
             
