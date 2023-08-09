@@ -19,7 +19,16 @@ st.header("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted 
 # Set up the multi-page choice on the left part
 with st.sidebar:
     st.markdown("## **User Input Parameters**")
-    
+
+    # Set up the part for user input file
+    st.markdown("- Uploading a file")
+    uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+        fileExtension = uploaded_file.type
+        if fileExtension == 'text/plain':
+        
+       
+    st.markdown("- Defining parameters")
     # Set up the input for Column Type selected by users
     st.write("Column Type")
     columntype = st.selectbox("Column Type", ('Circular Column', 'Circular Beam-Column', 'Rectangular Column', 'Rectangular Beam-Column'), label_visibility="collapsed")
@@ -40,15 +49,7 @@ with st.sidebar:
     # Set up the inputs for Cross Section Dimensions
     st.write("Cross Section Dimension")
     
-    # Set up the part for user input file
-    st.write("Input an Excel file")
-    uploaded_file = st.file_uploader("Choose a file")
-    if uploaded_file is not None:
-        fileExtension = uploaded_file.type
-        if fileExtension == 'text/plain':
-            
-        
-        
+    
 
 
 
