@@ -8,6 +8,30 @@ import math
 from io import StringIO
 import os
 
+# Define functions used later
+def FindIndexfromList(List, Target):
+    # This function find a target from a list and return the index of the target's position
+    # Inputs:
+    # List: a list to carry out the search (input a 1-D vector)
+    # Target: the target searched for
+    
+    # Output:
+    # Index of the Target found in this List
+    
+    # Covert the list into numpy array form
+    NPlist = np.asarray(List)
+    # Find the total number of elements in this list
+    nele = np.shape(NPlist)[0]
+    # Initialize the output list
+    IndexList = []
+    # Loop over the whole list
+    for i in range(0, nele):
+        if Target in NPlist[i]:
+            IndexList.append(i)
+              
+    # Convert the index list to numpy array form
+    IndexList = np.asarray(IndexList)
+    return IndexList
 
 
 # Set up the website (name, layout)
@@ -69,10 +93,7 @@ with st.sidebar:
                 csvarray = np.asarray(csvdata)
                 coldata = csvarray[:,2]
                 targdata = "W16"
-                finddata = []
-                for i in range(0, np.size(coldata,0)):
-                    if targdata in coldata[i]:
-                        finddata.append(i)
+                finddata = FindIndexfromList(coldata, targdata)
                 
 
             
