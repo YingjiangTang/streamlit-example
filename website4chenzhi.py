@@ -16,6 +16,8 @@ st.set_page_config(page_title="MaGeNiuBi", layout="wide")
 # Set up the header
 st.header("Resistance of Concrete-Filled Steel Tubular (CFST) Columns Predicted by Machine Learning Models")
 
+Flag = 0
+
 # Set up the first section on the left part
 with st.sidebar:
     st.markdown("## **User Input Parameters**")
@@ -55,9 +57,11 @@ with st.sidebar:
         if st.button("Process"):
             if fileExtension == 'text/plain':
                 rawtext = uploaded_file.read()
+                Flag = 2
                 
             if fileExtension == 'text/csv':
                 csvdata = pd.read_csv(uploaded_file)
+                Flag = 3
 
 
             
@@ -83,10 +87,10 @@ with st.container():
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
 
-    if rawtext is not None:
+    if Flag == 2:
         st.write(rawtext)
 
-    if csvdata is not None:
+    if Flag == 3:
         st.dataframe(csvdata)
 
 
