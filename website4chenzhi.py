@@ -26,7 +26,8 @@ with st.sidebar:
     if uploaded_file is not None:
         fileExtension = uploaded_file.type
         if fileExtension == 'text/plain':  
-             
+
+with st.sidebar:
     st.markdown("- Defining parameters")
     # Set up the input for Column Type selected by users
     st.write("Column Type")
