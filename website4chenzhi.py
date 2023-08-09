@@ -56,12 +56,13 @@ with st.sidebar:
         # Add a button for the user to process
         if st.button("Process"):
             if fileExtension == 'text/plain':
-                rawtext = uploaded_file.read()
-                Flag = 2
+                # Read the text file and convert as string type
+                rawtext = str(uploaded_file.read(), "utf-8")
+                
                 
             if fileExtension == 'text/csv':
+                # Read the table in csv file
                 csvdata = pd.read_csv(uploaded_file)
-                Flag = 3
 
 
             
@@ -86,8 +87,8 @@ with st.container():
     st.subheader('Input Parameters')
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
-    # st.write(rawtext)
-    st.dataframe(csvdata)
+    st.write(rawtext)
+    # st.dataframe(csvdata)
 
 
 
