@@ -86,8 +86,8 @@ with st.container():
     st.subheader('Input Parameters')
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
-    st.write(rawtext)
-    # st.dataframe(csvdata)
+    # st.write(rawtext)
+    st.dataframe(csvdata)
 
 
 
