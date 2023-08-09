@@ -67,9 +67,7 @@ with st.sidebar:
                 # Read the table in csv file
                 csvdata = pd.read_csv(uploaded_file)
 
-            if fileExtension == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-                # Read the table in excel file
-                xsldata = pd.read_excel(uploaded_file, engine='openpyxl')
+            
 
 
             
@@ -95,8 +93,9 @@ with st.container():
     st.write("---")
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
     # st.write(rawtext)
-    # st.dataframe(csvdata)
-    st.dataframe(xsldata)
+    st.dataframe(csvdata)
+    flag = csvdata[0,4]
+    st.write(flag)
 
 
 
