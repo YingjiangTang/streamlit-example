@@ -66,6 +66,7 @@ with st.sidebar:
             if fileExtension == 'text/csv':
                 # Read the table in csv file
                 csvdata = pd.read_csv(uploaded_file)
+                csvarray = np.asarray(csvdata)
 
             
 
@@ -94,7 +95,7 @@ with st.container():
     st.subheader('Nominal (Nn) and Design (Nd) Resistances')
     # st.write(rawtext)
     st.dataframe(csvdata)
-    flag = csvdata[0][4]
+    flag = csvarray[0][4]
     st.write(flag)
 
 
